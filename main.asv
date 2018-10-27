@@ -1,0 +1,12 @@
+clear;
+close all;
+clc;
+
+I = imread('E:\Sonu Sharma\Documents\MATLAB\IMAGE PROCESSING\Morphological Segmentation\shape.jpg');
+
+J = im2bw(compass_op(I));
+
+J = dilation_f(J);
+J = erosion_f(J);
+
+imshow(imfill(J, 'holes'));
